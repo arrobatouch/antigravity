@@ -1,0 +1,17 @@
+{
+    "tenant_default": [
+        {
+            "id": "session-default-1",
+            "name": "Oficina Central",
+            "status": "disconnected",
+            "phoneNumber": null,
+            "qrCode": null,
+            "config": {
+                "autoReplies": true,
+                "followUp": false,
+                "aiEnabled": true
+            },
+            "createdAt": "2025-12-05T10:00:00.000Z"
+        }
+    ]
+}

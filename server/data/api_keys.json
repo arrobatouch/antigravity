@@ -1,0 +1,12 @@
+{
+  "tenant_default": {
+    "key": "agent_3a7119a1d9874f60bad55ee0bceaec60",
+    "createdAt": "2025-12-05T10:57:45.960Z",
+    "lastUsed": null
+  },
+  "tenant_company2": {
+    "key": "agent_95178decaa464a6b97b25413d68fcb34",
+    "createdAt": "2025-12-05T11:48:13.712Z",
+    "lastUsed": null
+  }
+}

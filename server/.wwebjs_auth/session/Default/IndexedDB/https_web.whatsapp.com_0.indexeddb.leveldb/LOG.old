@@ -1,0 +1,26 @@
+2025/12/03-15:51:17.261 2154 Reusing MANIFEST C:\TECCIA\demo\server\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/12/03-15:51:17.262 2154 Recovering log #79
+2025/12/03-15:51:17.504 2154 Reusing old log C:\TECCIA\demo\server\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000079.log 
+2025/12/03-15:51:20.176 3320 Level-0 table #85: started
+2025/12/03-15:51:20.216 3320 Level-0 table #85: 518096 bytes OK
+2025/12/03-15:51:20.219 3320 Delete type=0 #79
+2025/12/03-15:51:20.259 bec Manual compaction at level-0 from '\x00\x1a\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x1b\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/12/03-15:51:20.261 bec Level-0 table #87: started
+2025/12/03-15:51:20.282 bec Level-0 table #87: 250 bytes OK
+2025/12/03-15:51:20.283 bec Delete type=0 #84
+2025/12/03-15:51:20.284 bec Manual compaction at level-0 from '\x00\x1b\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x1c\x00\x00\x00' @ 0 : 0; will stop at '\x00\x1b\x00\x00\x05' @ 428950 : 0
+2025/12/03-15:51:20.284 bec Compacting 1@0 + 1@1 files
+2025/12/03-15:51:20.406 bec Generated table #88@0: 27457 keys, 280857 bytes
+2025/12/03-15:51:20.406 bec Compacted 1@0 + 1@1 files => 280857 bytes
+2025/12/03-15:51:20.407 bec compacted to: files[ 0 1 2 0 0 0 0 ]
+2025/12/03-15:51:20.407 bec Delete type=2 #87
+2025/12/03-15:51:20.408 bec Manual compaction at level-0 from '\x00\x1b\x00\x00\x05' @ 428950 : 0 .. '\x00\x1c\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/12/03-15:51:20.443 2154 Compacting 1@1 + 2@2 files
+2025/12/03-15:51:20.841 2154 Generated table #89@1: 45147 keys, 2210990 bytes
+2025/12/03-15:51:20.935 2154 Generated table #90@1: 19154 keys, 896379 bytes
+2025/12/03-15:51:20.935 2154 Compacted 1@1 + 2@2 files => 3107369 bytes
+2025/12/03-15:51:20.937 2154 compacted to: files[ 0 0 2 0 0 0 0 ]
+2025/12/03-15:51:20.938 2154 Delete type=2 #81
+2025/12/03-15:51:20.938 2154 Delete type=2 #82
+2025/12/03-15:51:20.938 2154 Delete type=2 #85
+2025/12/03-15:51:20.938 2154 Delete type=2 #88

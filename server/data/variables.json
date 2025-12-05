@@ -1,0 +1,110 @@
+{
+  "tenant_default": [
+    {
+      "id": "var_001",
+      "name": "nombre",
+      "type": "contact",
+      "description": "Nombre de pila del cliente",
+      "askIfMissing": true,
+      "askMessage": "¡Hola! ¿Me decís tu nombre para continuar?"
+    },
+    {
+      "id": "var_002",
+      "name": "apellido",
+      "type": "contact",
+      "description": "Apellido del cliente",
+      "askIfMissing": true,
+      "askMessage": "¿Cuál es tu apellido?"
+    },
+    {
+      "id": "var_003",
+      "name": "dni",
+      "type": "contact",
+      "description": "DNI o documento del cliente",
+      "askIfMissing": true,
+      "askMessage": "Necesito tu DNI para continuar con el trámite."
+    },
+    {
+      "id": "var_004",
+      "name": "email",
+      "type": "contact",
+      "description": "Email del cliente",
+      "askIfMissing": true,
+      "askMessage": "¿Me compartís tu email?"
+    },
+    {
+      "id": "var_005",
+      "name": "telefono",
+      "type": "contact",
+      "description": "Teléfono de contacto",
+      "askIfMissing": false
+    },
+    {
+      "id": "var_006",
+      "name": "nro_cliente",
+      "type": "contact",
+      "description": "Número de legajo o cliente",
+      "askIfMissing": false
+    },
+    {
+      "id": "var_007",
+      "name": "empresa_nombre",
+      "type": "tenant",
+      "value": "WORLD GUNS S.A.",
+      "description": "WORLD GUNS S.A."
+    },
+    {
+      "id": "var_008",
+      "name": "empresa_horario",
+      "type": "tenant",
+      "value": "Lunes a Viernes de 9 a 18hs",
+      "description": "Lunes a Viernes de 9 a 18hs"
+    },
+    {
+      "id": "var_009",
+      "name": "empresa_direccion",
+      "type": "tenant",
+      "value": "Av. Corrientes 1234, CABA",
+      "description": "Av. Corrientes 1234, CABA"
+    },
+    {
+      "id": "var_010",
+      "name": "empresa_telefono",
+      "type": "tenant",
+      "value": "+54 11 1234-5678",
+      "description": "+54 11 1234-5678"
+    },
+    {
+      "id": "var_011",
+      "name": "empresa_email",
+      "type": "tenant",
+      "value": "contacto@worldguns.com",
+      "description": "contacto@worldguns.com"
+    },
+    {
+      "id": "var_012",
+      "name": "empresa_cbu_pesos",
+      "type": "tenant",
+      "value": "0000003100010123456789",
+      "description": "0000003100010123456789"
+    },
+    {
+      "id": "var_013",
+      "name": "fecha",
+      "type": "system",
+      "description": "Fecha actual dd/mm/aaaa"
+    },
+    {
+      "id": "var_014",
+      "name": "hora",
+      "type": "system",
+      "description": "Hora actual HH:MM"
+    },
+    {
+      "id": "var_015",
+      "name": "fecha_humana",
+      "type": "system",
+      "description": "Fecha en formato legible (Lunes 5 de Enero)"
+    }
+  ]
+}

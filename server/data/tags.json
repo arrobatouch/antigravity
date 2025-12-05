@@ -1,0 +1,124 @@
+{
+  "56bef83d-5610-4164-ba5b-8d5556a35a21": [
+    {
+      "id": "21d496f4-b614-427e-b072-e829a69c33f0",
+      "code": "/datos_bancarios",
+      "category": "Atención",
+      "description": "Datos Bancarios",
+      "template": "BANCO BBVA 💰PESOS\nCUIT: 30-71777825-8\nRAZON SOCIAL: WORLD GUNS SRL\nCUENTA: 169-013232/9\nCBU: 0170169820000001323296\nALIAS: WORLDGUNS1\n\nBANCO BBVA 💸DOLARES\nCUIT: 30-71777825-8\nRAZON SOCIAL: WORLD GUNS SRL\nCUENTA: 001-401544/3\nCBU: 0170001526000040154433\nALIAS: WORLD.DOLARES",
+      "location": "",
+      "variables": [],
+      "createdAt": "2025-12-05T12:17:59.163Z"
+    },
+    {
+      "id": "e4097c2c-7516-4398-bdab-e0fc793ba234",
+      "code": "/contacto",
+      "category": "Atención",
+      "description": "contacto",
+      "template": "¡Hola 👋 Te contactaste con la Administración de WORLD GUNS!\nTe dejo el acceso directo para que te puedas comunicar ➡️ 541138644279\" target=\"_blank\" rel=\"noopener noreferrer\">wa.me/541138644279 con nuestro equipo de ventas.",
+      "location": "",
+      "variables": [],
+      "createdAt": "2025-12-05T12:16:12.587Z"
+    },
+    {
+      "id": "e7429f98-80db-496b-9e59-317d85ac1ef6",
+      "code": "/tenencia_express",
+      "category": "Atención",
+      "description": "Nueva Tenencia Express",
+      "template": "NUEVA TENENCIA EXPRESS\n\nIngresa a este link ⬇️\nhttps://mi.renar.gob.ar/\n\n✅ Usa la misma clave de Mi Argentina\n➡️ Ingresa al modulo de \"Credenciales\"\n✅ Selecciona \"TENENCIAS - Nueva Express\" (Icono verde)\n✅ Realiza el pago escaneando el QR\n🆗 Listo 🙌 tu tramite esta en proceso\n1- Se acredita el pago en el mismo momento\n2 - Te figura en el listado de armas registradas a tu nombre\n3- Comenza a controlar con Mi Argentina la aparición de la credencial digital (Puede demorar de 48 a 72hs)\n4 - Cuando tengas la credencial envíanos una captura de pantalla para coordinar la entrega.\n\nImportante El tramite express no emite credencial física\nSi estas registrando ese calibre por primera vez el sistema te otorga automáticamente tarjeta de consumo, en caso que ya tengas no lo emite.\n\n",
+      "location": "",
+      "variables": [],
+      "createdAt": "2025-12-05T12:14:59.201Z"
+    },
+    {
+      "id": "5223ab82-3209-4380-b581-c5efdc0c8ee3",
+      "code": "/felicidades",
+      "category": "Atención",
+      "description": "🥳 Felicidades tu Credencial de Legitimo Usuario fue aprobada.",
+      "template": "🥳 Felicidades tu Credencial de Legitimo Usuario fue aprobada.\n\n✅ Vigencia hasta el\n✅ Credencial digital\n✅ La podes visualizar en MI ARGENTINA (No olvides asociar el servicio de RENAR para poder hacerlo)\n\nImportante: RENAR no emite credencial física, es solo virtual, si queres la podes imprimir \"No se recomienda plastificarla\" hacerlo puede indicar documentación apócrifa.",
+      "location": "",
+      "variables": [],
+      "createdAt": "2025-12-04T20:19:06.432Z"
+    }
+  ],
+  "tenant_default": [
+    {
+      "id": "tag_example_001",
+      "code": "/bienvenida_personalizada",
+      "category": "Atención",
+      "description": "Saludo personalizado con variables",
+      "template": "¡Hola {nombre}! 👋 Bienvenido a {empresa_nombre}.\n\nTu número de cliente es: {nro_cliente}\n\n¿En qué puedo ayudarte hoy?",
+      "location": "",
+      "variables": [
+        "nombre",
+        "empresa_nombre",
+        "nro_cliente"
+      ],
+      "createdAt": "2025-12-05T13:00:00.000Z"
+    },
+    {
+      "id": "tag_example_002",
+      "code": "/horarios",
+      "category": "Información",
+      "description": "Horarios de atención",
+      "template": "📅 Nuestros horarios de atención son:\n{empresa_horario}\n\n📍 Ubicación: {empresa_direccion}\n📞 Teléfono: {empresa_telefono}\n\n¿Necesitas algo más?",
+      "location": "",
+      "variables": [
+        "empresa_horario",
+        "empresa_direccion",
+        "empresa_telefono"
+      ],
+      "createdAt": "2025-12-05T13:01:00.000Z"
+    },
+    {
+      "id": "tag_example_003",
+      "code": "/datos_cliente",
+      "category": "Consulta",
+      "description": "Confirmación de datos del cliente",
+      "template": "Perfecto {nombre} {apellido}! 📋\n\nConfirmo tus datos:\n👤 Nombre: {nombre} {apellido}\n🆔 DNI: {dni}\n📧 Email: {email}\n📱 Teléfono: {telefono}\n\n¿Está todo correcto?",
+      "location": "",
+      "variables": [
+        "nombre",
+        "apellido",
+        "dni",
+        "email",
+        "telefono"
+      ],
+      "createdAt": "2025-12-05T13:02:00.000Z"
+    },
+    {
+      "id": "tag_example_004",
+      "code": "/datos_bancarios_dinamicos",
+      "category": "Pagos",
+      "description": "Datos bancarios con variables",
+      "template": "💰 Datos para transferencia de {empresa_nombre}:\n\n🏦 CBU Pesos: {empresa_cbu_pesos}\n\n📧 Enviar comprobante a: {empresa_email}\n📞 Consultas: {empresa_telefono}\n\nFecha: {fecha}\nHora: {hora}",
+      "location": "",
+      "variables": [
+        "empresa_nombre",
+        "empresa_cbu_pesos",
+        "empresa_email",
+        "empresa_telefono",
+        "fecha",
+        "hora"
+      ],
+      "createdAt": "2025-12-05T13:03:00.000Z"
+    },
+    {
+      "id": "tag_example_005",
+      "code": "/confirmacion_tramite",
+      "category": "Trámites",
+      "description": "Confirmación de trámite con fecha",
+      "template": "✅ Trámite confirmado para {nombre} {apellido}\n\n📋 Cliente Nº: {nro_cliente}\n🆔 DNI: {dni}\n📅 Fecha de solicitud: {fecha_humana}\n\n{empresa_nombre} te mantendrá informado.\n\n¿Alguna consulta?",
+      "location": "",
+      "variables": [
+        "nombre",
+        "apellido",
+        "nro_cliente",
+        "dni",
+        "fecha_humana",
+        "empresa_nombre"
+      ],
+      "createdAt": "2025-12-05T13:04:00.000Z"
+    }
+  ]
+}

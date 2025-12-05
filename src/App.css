@@ -1,0 +1,63 @@
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+/* If we want a "floating" look like some premium apps, we might add padding and rounded corners to the grid container. 
+   But for a "WhatsApp Web" style, it's usually full width. 
+   Let's go with full width for now, but maybe a subtle border top if it was a desktop app. */
+
+.layout-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr 450px;
+  /* Left, Center, Right */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.col-left {
+  border-right: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+  display: flex;
+  flex-direction: column;
+}
+
+.col-center {
+  background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+  background-color: var(--bg-primary);
+  background-blend-mode: overlay;
+  opacity: 0.95;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.col-right {
+  border-left: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .layout-grid {
+    grid-template-columns: 320px 1fr 380px;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  /* Maybe hide the AI panel or make it an overlay on smaller screens? 
+     For now, let's just shrink it. */
+  .layout-grid {
+    grid-template-columns: 80px 1fr 350px;
+    /* Collapsed sidebar */
+  }
+}

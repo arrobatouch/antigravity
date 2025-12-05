@@ -1,0 +1,54 @@
+[
+  {
+    "id": "6f5be4f5-f87d-47d4-b95a-294437983cbe",
+    "username": "admin",
+    "password": "admin",
+    "tenantId": "tenant_admin",
+    "isSuperAdmin": true,
+    "companyName": "",
+    "mobile": "",
+    "email": "",
+    "employees": 0,
+    "status": "active",
+    "createdAt": "2025-12-04T18:08:16.024Z"
+  },
+  {
+    "id": "ac1cfd62-f891-4846-a48d-d30edda24ade",
+    "username": "user1",
+    "password": "password",
+    "tenantId": "tenant_default",
+    "isSuperAdmin": false,
+    "companyName": "Demo Company",
+    "mobile": "+54 9 11 1234-5678",
+    "email": "user1@demo.com",
+    "employees": 3,
+    "status": "active",
+    "createdAt": "2025-12-04T18:08:16.028Z"
+  },
+  {
+    "id": "a8e630ef-45c7-47a5-b9c6-3a7c850681ed",
+    "username": "user2",
+    "password": "password",
+    "tenantId": "tenant_company2",
+    "isSuperAdmin": false,
+    "companyName": "Tech Solutions",
+    "mobile": "+54 9 11 9876-5432",
+    "email": "user2@techsolutions.com",
+    "employees": 5,
+    "status": "active",
+    "createdAt": "2025-12-04T18:08:16.029Z"
+  },
+  {
+    "id": "af855f4b-1291-4473-87b9-a86d14b1b9cb",
+    "username": "gabito",
+    "password": "gabito33",
+    "tenantId": "56bef83d-5610-4164-ba5b-8d5556a35a21",
+    "isSuperAdmin": false,
+    "companyName": "Gabito",
+    "mobile": "",
+    "email": "gabito@gmail.com",
+    "employees": 7,
+    "status": "active",
+    "createdAt": "2025-12-04T18:17:24.414Z"
+  }
+]

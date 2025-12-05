@@ -1,0 +1,6 @@
+2025/12/05-07:54:39.538 3ae4 Reusing MANIFEST C:\TECCIA\demo\server\.wwebjs_auth\session-tenant_admin\Default\Local Storage\leveldb/MANIFEST-000001
+2025/12/05-07:54:39.645 3ae4 Recovering log #3
+2025/12/05-07:54:39.667 3ae4 Reusing old log C:\TECCIA\demo\server\.wwebjs_auth\session-tenant_admin\Default\Local Storage\leveldb/000003.log 
+2025/12/05-10:59:06.701 4f94 Level-0 table #5: started
+2025/12/05-10:59:06.717 4f94 Level-0 table #5: 18806 bytes OK
+2025/12/05-10:59:06.733 4f94 Delete type=0 #3

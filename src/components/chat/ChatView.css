@@ -1,0 +1,125 @@
+.chat-view-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.chat-view-header {
+    height: 60px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 10;
+}
+
+.chat-header-info {
+    margin-left: 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-name {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.header-status {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.header-actions {
+    display: flex;
+    gap: 16px;
+}
+
+.messages-area {
+    flex: 1;
+    padding: 20px 60px;
+    /* WhatsApp Web style padding */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.message-row {
+    display: flex;
+    width: 100%;
+}
+
+.message-row.sent {
+    justify-content: flex-end;
+}
+
+.message-row.received {
+    justify-content: flex-start;
+}
+
+.message-bubble {
+    max-width: 65%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: var(--shadow-sm);
+    font-size: 14.2px;
+    line-height: 19px;
+}
+
+.client-bubble {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-top-left-radius: 0;
+    border: 1px solid var(--border-color);
+}
+
+.ai-bubble {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border-top-right-radius: 0;
+}
+
+.message-text {
+    margin-bottom: 4px;
+}
+
+.message-meta {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.chat-input-area {
+    height: 62px;
+    background-color: var(--bg-secondary);
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 10;
+    border-top: 1px solid var(--border-color);
+}
+
+.input-wrapper {
+    flex: 1;
+    background-color: var(--input-bg);
+    border-radius: 8px;
+    padding: 9px 12px;
+    border: 1px solid var(--input-border);
+}
+
+.input-wrapper input {
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    outline: none;
+    font-size: 15px;
+}

@@ -1,0 +1,32 @@
+{
+    "solicitar_nombre": {
+        "text": "¡Hola! ¿Me decís tu nombre para continuar?",
+        "variable": "nombre",
+        "type": "contact"
+    },
+    "solicitar_apellido": {
+        "text": "¿Cuál es tu apellido?",
+        "variable": "apellido",
+        "type": "contact"
+    },
+    "solicitar_dni": {
+        "text": "Necesito tu DNI para continuar con el trámite.",
+        "variable": "dni",
+        "type": "contact"
+    },
+    "solicitar_email": {
+        "text": "¿Me compartís tu email?",
+        "variable": "email",
+        "type": "contact"
+    },
+    "solicitar_telefono": {
+        "text": "¿Cuál es tu número de teléfono?",
+        "variable": "telefono",
+        "type": "contact"
+    },
+    "solicitar_nro_cliente": {
+        "text": "¿Cuál es tu número de cliente o legajo?",
+        "variable": "nro_cliente",
+        "type": "contact"
+    }
+}

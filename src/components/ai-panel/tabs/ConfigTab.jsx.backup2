@@ -1,0 +1,182 @@
+import React, { useState, useEffect } from 'react';
+import './ConfigTab.css';
+import { io } from 'socket.io-client';
+
+const ConfigTab = () => {
+    const [automations, setAutomations] = useState({
+        autoReply: true,
+        followUp: true,
+        postSale: false,
+        offHours: true
+    });
+    const [qrCode, setQrCode] = useState('');
+    const [status, setStatus] = useState('Desconectado');
+    const [socket, setSocket] = useState(null);
+
+    useEffect(() => {
+        const newSocket = io('http://localhost:3002');
+        setSocket(newSocket);
+
+        newSocket.on('qr', (qr) => {
+            setQrCode(qr);
+            setStatus('Esperando escaneo...');
+        });
+
+        newSocket.on('status', (data) => {
+            if (data.status === 'connected') {
+                setStatus('Conectado');
+                setQrCode(''); // Clear QR when connected
+            } else if (data.status === 'authenticated') {
+                setStatus('Autenticado');
+            } else {
+                setStatus('Desconectado');
+            }
+        });
+
+        return () => newSocket.close();
+    }, []);
+
+    const toggleAutomation = (key) => {
+        setAutomations(prev => ({ ...prev, [key]: !prev[key] }));
+    };
+
+    return (
+        <div className="config-tab-container">
+            {/* Connection Section */}
+            <div className="config-section glass-panel">
+                <h3 className="section-title">Conexión WhatsApp</h3>
+                <div className="connection-status">
+                    <div className="qr-placeholder">
+                        {status === 'Conectado' ? (
+                            <div className="qr-connected">✓</div>
+                        ) : qrCode ? (
+                            <img src={qrCode} alt="QR Code" className="qr-image" />
+                        ) : (
+                            <div className="qr-loading">Cargando QR...</div>
+                        )}
+                        <span className="qr-status">{status}</span>
+                    </div>
+                    <div className="connection-info">
+                        <div className="info-row">
+                            <span className="label">Estado:</span>
+                            <span className={`value ${status === 'Conectado' ? 'success' : ''}`}>{status}</span>
+                        </div>
+                        <div className="info-row">
+                            <span className="label">Número:</span>
+                            <span className="value">{status === 'Conectado' ? 'Vinculado' : '-'}</span>
+                        </div>
+                        <div className="info-row">
+                            <span className="label">Sesión:</span>
+                            <span className="value">{status === 'Conectado' ? 'Activa' : '-'}</span>
+                        </div>
+                        <button className="danger-btn">Desconectar</button>
+                        <button className="secondary-btn mt-2" onClick={() => socket?.emit('restart_client')}>
+                            Reiniciar Conexión
+                        </button>
+                        <button className="danger-btn mt-2" style={{ marginLeft: '10px' }} onClick={() => {
+                            if (window.confirm('¿Estás seguro? Esto borrará la sesión actual y tendrás que escanear el QR de nuevo.')) {
+                                socket?.emit('restart_client', { hard: true });
+                            }
+                        }}>
+                            Restablecimiento de Fábrica
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            {/* Automations Section */}
+            <div className="config-section glass-panel">
+                <h3 className="section-title">Automatizaciones</h3>
+                <div className="switches-list">
+                    <div className="switch-row">
+                        <div className="switch-info">
+                            <span className="switch-label">Respuestas Automáticas</span>
+                            <span className="switch-desc">La IA responde consultas de precio y stock.</span>
+                        </div>
+                        <button
+                            className={`switch-btn ${automations.autoReply ? 'active' : ''}`}
+                            onClick={() => toggleAutomation('autoReply')}
+                        >
+                            <div className="switch-handle"></div>
+                        </button>
+                    </div>
+                    <div className="switch-row">
+                        <div className="switch-info">
+                            <span className="switch-label">Seguimientos</span>
+                            <span className="switch-desc">Reactivar clientes inactivos tras 48hs.</span>
+                        </div>
+                        <button
+                            className={`switch-btn ${automations.followUp ? 'active' : ''}`}
+                            onClick={() => toggleAutomation('followUp')}
+                        >
+                            <div className="switch-handle"></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            {/* API Providers Section */}
+            <div className="config-section glass-panel">
+                <h3 className="section-title">Proveedores de IA</h3>
+                <div className="api-config-list">
+                    <div className="api-row">
+                        <div className="api-info">
+                            <span className="api-label">OpenAI (GPT-4)</span>
+                            <input type="password" placeholder="sk-..." className="api-input" />
+                        </div>
+                        <button className="save-btn-small">Guardar</button>
+                    </div>
+                    <div className="api-row">
+                        <div className="api-info">
+                            <span className="api-label">Google Gemini</span>
+                            <input type="password" placeholder="AIza..." className="api-input" />
+                        </div>
+                        <button className="save-btn-small">Guardar</button>
+                    </div>
+                    <div className="api-row">
+                        <div className="api-info">
+                            <span className="api-label">DeepSeek</span>
+                            <input type="password" placeholder="ds-..." className="api-input" />
+                        </div>
+                        <button className="save-btn-small">Guardar</button>
+                    </div>
+                </div>
+            </div>
+
+            {/* Rules Section */}
+            <div className="config-section glass-panel">
+                <h3 className="section-title">Reglas Avanzadas</h3>
+                <div className="rules-table-container custom-scrollbar">
+                    <table className="rules-table">
+                        <thead>
+                            <tr>
+                                <th>Condición</th>
+                                <th>Acción</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Incluye "precio"</td>
+                                <td><span className="badge auto">Responder Auto</span></td>
+                                <td>✎</td>
+                            </tr>
+                            <tr>
+                                <td>Mensaje negativo</td>
+                                <td><span className="badge manual">Derivar</span></td>
+                                <td>✎</td>
+                            </tr>
+                            <tr>
+                                <td>Cliente inactivo</td>
+                                <td><span className="badge follow">Seguimiento</span></td>
+                                <td>✎</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default ConfigTab;

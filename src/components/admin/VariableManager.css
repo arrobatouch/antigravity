@@ -1,0 +1,298 @@
+/* Variable Manager Styles */
+.variable-manager {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.variable-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.variable-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin: 4px 0 0;
+}
+
+.btn-add-variable {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-add-variable:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    border: 2px dashed var(--border-color);
+}
+
+.empty-icon {
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.empty-state h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 8px;
+}
+
+.empty-state p {
+    color: var(--text-secondary);
+    margin: 0 0 24px;
+}
+
+/* Variables Table */
+.variables-table-container {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.variables-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.variables-table thead {
+    background: var(--bg-tertiary);
+}
+
+.variables-table th {
+    text-align: left;
+    padding: 16px 20px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.variables-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.variables-table tbody tr:hover {
+    background: var(--bg-hover);
+}
+
+.variables-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Variable Code */
+.variable-code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    background: var(--primary-light);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* Type Badges */
+.type-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.badge-contact {
+    background: var(--info-bg);
+    color: var(--info-color);
+}
+
+.badge-tenant {
+    background: var(--warning-bg);
+    color: var(--warning-color);
+}
+
+.badge-operator {
+    background: #ede9fe;
+    color: #7c3aed;
+}
+
+.badge-system {
+    background: var(--bg-tertiary);
+    color: var(--text-muted);
+}
+
+/* Description Cell */
+.description-cell {
+    max-width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-btn.edit {
+    background: var(--info-bg);
+    color: var(--info-color);
+}
+
+.action-btn.edit:hover {
+    background: var(--info-color);
+    color: white;
+}
+
+.action-btn.delete {
+    background: var(--danger-bg);
+    color: var(--danger-color);
+}
+
+.action-btn.delete:hover {
+    background: var(--danger-color);
+    color: white;
+}
+
+/* Modal Specific Styles */
+.variable-modal {
+    max-width: 600px;
+}
+
+.variable-modal .form-group {
+    margin-bottom: 20px;
+}
+
+.variable-modal .form-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+}
+
+.variable-modal .form-group input,
+.variable-modal .form-group select,
+.variable-modal .form-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+.variable-modal .form-group input:focus,
+.variable-modal .form-group select:focus,
+.variable-modal .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.variable-modal .form-group small {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.variable-modal .checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.variable-modal .checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.variable-modal .checkbox-group input[type="checkbox"] {
+    width: auto;
+    cursor: pointer;
+}
+
+.variable-modal textarea {
+    resize: vertical;
+    font-family: inherit;
+}
+
+/* Loading State */
+.loading-state {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .variable-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .variables-table {
+        font-size: 0.875rem;
+    }
+
+    .variables-table th,
+    .variables-table td {
+        padding: 12px;
+    }
+
+    .description-cell {
+        max-width: 200px;
+    }
+}
